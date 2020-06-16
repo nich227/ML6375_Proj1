@@ -165,11 +165,11 @@ if __name__ == "__main__":
 
         F_scores.append(
             ((len(input_partitions[partition])/len([y for x in list(input_partitions.values()) for y in x]) * max_gain), max_attr))
-
+    
     split_partition = list(input_partitions.keys())[
         [tuple[0] for tuple in F_scores].index(max([tuple[0] for tuple in F_scores]))]
-    split_attr = [tuple[1] for tuple in F_scores].index(
-        max([tuple[1] for tuple in F_scores]))
+    split_attr = F_scores[[tuple[0] for tuple in F_scores].index(max([tuple[0] for tuple in F_scores]))][1]
+    print(split_partition, split_attr)
 
     # Split the partition by attribute
 
