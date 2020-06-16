@@ -170,7 +170,6 @@ if __name__ == "__main__":
         [tuple[0] for tuple in F_scores].index(max([tuple[0] for tuple in F_scores]))]
     split_attr = F_scores[[tuple[0] for tuple in F_scores].index(
         max([tuple[0] for tuple in F_scores]))][1]
-    print(split_partition, split_attr)
 
     # Split the partition by attribute
 
