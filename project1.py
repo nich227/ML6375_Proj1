@@ -11,9 +11,8 @@ import sys
 import math
 from collections import Counter
 
+
 # Reads from an input dataset and an input partition
-
-
 def read_input_files(dataset_file, partition_file):
     # Process dataset
     input_dataset = []
